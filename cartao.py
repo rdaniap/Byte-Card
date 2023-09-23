@@ -38,3 +38,8 @@ class Cartao:
     @property 
     def status(self):
         return self.__status
+    
+    
+    @limite.setter
+    def limite(self, novoValor):
+         self.__limite = novoValor
