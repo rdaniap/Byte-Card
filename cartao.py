@@ -2,9 +2,15 @@ class Cartao:
 
 
     def __init__(self, numero, validade, cvv, limite, cliente):
-        self.numero = numero
-        self.validade = validade
-        self.cvv = cvv
-        self.limite = limite
-        self.cliente = cliente        
-        self.status = "ATIVO"
+        self.__numero = numero
+        self.__validade = validade
+        self.__cvv = cvv
+        self.__limite = limite
+        self.__cliente = cliente        
+        self.__status = "ATIVO"
+
+    def cancela(self):
+        self.__status = "cancelado"
+
+    def ativa(self):
+        self.__status = "ativo"
